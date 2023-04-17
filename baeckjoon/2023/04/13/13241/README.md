@@ -10,6 +10,6 @@
 javascript Number의 범위는 100000000보다 크다.
 
 ```js
-const biggestInt = Number.MAX_SAFE_INTEGER; //  (2**53 - 1) =>  9007199254740991
-const smallestInt = Number.MIN_SAFE_INTEGER; // -(2**53 - 1) => -9007199254740991
+const biggestInt = Number.MAX_SAFE_INTEGER; //  (2**53 - 1) =>  9,007,199,254,740,991
+const smallestInt = Number.MIN_SAFE_INTEGER; // -(2**53 - 1) => -9,007,199,254,740,991
 ```
