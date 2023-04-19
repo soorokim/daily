@@ -1,0 +1,31 @@
+15
+push 1
+front
+back
+size
+empty
+push 2
+front
+back
+size
+empty
+push 3
+front
+back
+size
+empty
+pop
+front
+back
+size
+empty
+pop
+front
+back
+size
+empty
+pop
+front
+back
+size
+empty
