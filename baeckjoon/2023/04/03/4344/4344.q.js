@@ -1,20 +1,19 @@
 const fs = require("fs");
 
-const inputs = fs
+const [[_], ...values] = fs
   // .readFileSync("/dev/stdin")
   .readFileSync(__dirname + "/test.txt")
   .toString()
-  .trim();
+  .trim()
+  .split("\n")
+  .map((t) => t.split(" ").map(Number));
 
-const croatia = ["c=", "c-", "dz=", "d-", "lj", "nj", "s=", "z="];
+const computer = (points) => {
+  const average = points.reduce((prev, curr) => prev + curr) / points.length;
+  const high = points.filter((p) => p > average);
+  const rate = (high.length / points.length) * 100;
+  const roundedRate = Math.round(rate * 1000) / 1000;
+  console.log(roundedRate.toFixed(3) + "%");
+};
 
-let results = inputs;
-for (let c of croatia) {
-  const divided = results.split(c);
-
-  if (divided.length > 1) {
-    results = divided.join("@");
-  }
-}
-
-console.log(results.length);
+values.forEach(([c, ...p]) => computer(p));
